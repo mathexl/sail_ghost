@@ -91,6 +91,18 @@
       -webkit-font-smoothing: subpixel-antialiased;
     }
 
+    a.register_link {
+    width: auto;
+    padding: 10px;
+    display: inline-block;
+    /* float: left; */
+    background-color: white;
+    color: #159776;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+  }
+
     .red{
       color: #CE282C !important;
     }
