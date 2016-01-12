@@ -18,7 +18,112 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
 
-    {{! Ghost outputs important style and meta data with this tag }}
+    <link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:100,200,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <style>
+
+
+    header{
+      width:100%;
+      height:100px;
+      position:relative;
+      z-index:30;
+
+    }
+
+    header .leftlinks{
+      left:0px;
+      text-align:right;
+      padding-right:10px;
+      box-sizing: border-box;
+      width: calc(50% - 100px);
+      height: 20px;
+      position: absolute;
+      bottom:22px;
+      font-family:Rambla, PT Sans Narrow, PT-Sans-Narrow, sans-narrow, Lato, sans-serif;
+      font-size:16px;
+      color:teal;
+    }
+
+    header .leftlinks > a {
+      text-decoration: none;
+      margin-left:2.5%;
+      margin-right:2.5%;
+      color: teal;
+    }
+
+    header * > a:hover {
+      opacity:.5;
+    }
+
+    header .rightlinks{
+      right:0px;
+      text-align:left;
+      padding-left:10px;
+      box-sizing: border-box;
+      width: calc(50% - 100px);
+      height: 20px;
+      position: absolute;
+      bottom:22px;
+      font-family:Rambla, PT Sans Narrow, PT-Sans-Narrow, sans-narrow, Lato, sans-serif;
+      font-size:16px;
+      color:teal;
+    }
+
+    header .rightlinks > a {
+      text-decoration: none;
+      margin-left:2.5%;
+      margin-right:2.5%;
+      color: teal;
+    }
+
+    header > img {
+      width:200px;
+      height:200px;
+      margin-left:48%;
+      margin-left:calc(50% - 100px);
+      background-color:white;
+      z-index:2;
+      position:relative;
+      border-radius:100%;
+    }
+
+    header > .underline{
+      position:absolute;
+      z-index:1;
+      width:100%;
+      height:10px;
+      bottom:0px;
+      left:0px;
+      background-color: teal;
+    }
+
+    body{
+      margin:0px;
+      padding:0px;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .red{
+      color: #CE282C !important;
+    }
+
+    .yellow{
+      color: #FECC2B !important;
+    }
+
+    .teal{
+      color: #159776 !important;
+    }
+
+    .purple{
+      color: #624A70 !important;
+    }
+
+  </style>
     {{ghost_head}}
 </head>
 <body class="{{body_class}} nav-closed">
@@ -27,12 +132,47 @@
 
     <div class="site-wrapper">
 
+        <header>
+          <div class="leftlinks">
+            <a href="" class="red">ABOUT</a>
+            <a href="" class="purple">THEME</a>
+            <a href="" class="yellow">PROGRAM</a>
+            <a href="" class="teal">SPEAKERS</a>
+          </div>
+          <div class="rightlinks">
+            <a href="" class="yellow">FAQ</a>
+            <a href="" class="red">LOGISTICS</a>
+            <a href="" class="teal">SPONSORS</a>
+            <a href="" class="purple">THE TEAM</a>
+          </div>
+          <div class="underline"></div>
+          <img class="logo" src="{{asset "images/sail_logo.png"}}">
+        </header>
+
         {{! Everything else gets inserted here }}
         {{{body}}}
 
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <footer>
+
+          <div class="col5">
+            <img src="{{asset "images/footer.png"}}" class="footerlogo">
+            <div class="socialmedia">
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-twitter"></i>
+            </div>
+          </div>
+          <div class="col5 pushdown">
+            <a href=""><!-- --></a>
+
+          </div>
+          <div class="col5 pushdown">
+
+          </div>
+          <div class="col5 pushdown">
+
+          </div>
         </footer>
+
 
     </div>
 
