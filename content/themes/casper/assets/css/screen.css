@@ -1178,6 +1178,8 @@ body.nav-opened .nav {
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
     word-wrap: break-word;
+    font-size:1.25em !important;
+    font-family:Lato !important;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -1901,7 +1903,7 @@ body:not(.post-template) .post-title {
     }
 
     .post {
-        font-size: 0.95em
+        font-size: 1.25em
     }
 
     body:not(.post-template) .post-title {
@@ -2092,6 +2094,7 @@ body:not(.post-template) .post-title {
         margin-right: 16px;
         padding-bottom: 2rem;
         line-height: 1.65em;
+        font-size:1.25em;
     }
 
     .post-date {
